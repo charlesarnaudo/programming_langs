@@ -24,7 +24,7 @@ let f2 (L : int list) =
 let rec snoc a (L: 'a list) =
     match L with 
     | [] -> [a]
-    | _ -> L.Head::(snoc a t)
+    | _ -> L.Head::(snoc a L.Tail)
 
 //let rec rac (L : ’a list) =
 //    if L.Tail.IsEmpty then L.Head
@@ -39,5 +39,5 @@ let rec rac (L : 'a list) =
 //     else L.Head::rdc(L.Tail);;
 let rec rdc (L : 'a list) =
     match L with 
-    | h::[] -> h
-    | _ -> h::(rdc L.Tail)
+    | h::[] -> []
+    | _ -> L.Head::(rdc L.Tail)
