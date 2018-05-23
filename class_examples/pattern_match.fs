@@ -14,7 +14,6 @@ let f x y =
 //      if L.IsEmpty then []
 //      else if L.Tail.IsEmpty then L
 //      else [L.Tail.Head]
-
 let f2 (L : int list) =
     match L with 
     | [] -> []
