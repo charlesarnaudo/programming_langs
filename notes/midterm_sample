@@ -1,0 +1,29 @@
+1.
+    a. (T) F# is statically typed
+    b. (T) Tuples are heterogenously typed
+    c. (F) Not valid: [[1; 4]; [-1; 5]; [3; 4]; 5] 
+    d. (T) let f x = (fun y -> x * y);; is a curried function
+    e. (T) A function with one function parameter that returns a function is order 2
+    f. (T) let f5 a b = (a+1)::b;; can only take integers as an argument for a
+    g. (T) The reduce function we have written is the same as the List.foldBack function
+    h. (T) The List.fold function is the same as List.foldBack for associative operations
+        such as + and *
+
+2. 
+    a. (let f a b = a*b) = (fun a b -> a*b)
+    b. (fun b -> 4*b) = let f a b = a * b;; f 4;;
+    c. List.map (fun a -> a+1) [1;2;3] = [2; 3; 4]
+    d. List.foldBack (fun a b -> a*b) [3;1;4] 1 = 12
+    e. List.foldBack (fun x c -> x+c) (List.map (fun a -> a+1) [1;2;3]) 1 = 10
+
+3.
+    a. (2, "b")
+    b. ("a", 8)
+    c. error
+    d. [2; 3; 4; 5]
+    e. [[(1, "a"); (2, "b")]]
+    f. [[(1, "a"); (2, "b")]]
+    g. [3; 2; 1]
+    h. [4; 5]
+
+    
