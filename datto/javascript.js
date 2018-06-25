@@ -13,8 +13,8 @@ var Testing = {
         var self = this;
         var ul = document.getElementsByTagName('ul')[0];
         function updateDisplay(e) {
-        	self.clickedList.pushIfDoesntExist(e.target.textContent);
-            self.displayData();
+            if (self.clickedList.pushIfDoesntExist(e.target.textContent))
+                self.displayData();
         }
         ul.addEventListener('click', updateDisplay, false);
     },
