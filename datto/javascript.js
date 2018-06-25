@@ -19,7 +19,7 @@ var Testing = {
         ul.addEventListener('click', updateDisplay, false);
     },
     displayData: function() {
-    	var textBox = document.getElementById('clickedElements');
+        var textBox = document.getElementById('clickedElements');
         textBox.textContent = this.clickedList.join(', ');
     }
 }
