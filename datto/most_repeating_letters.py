@@ -17,6 +17,7 @@ def get_num_repeating_letters(word):
     # Create dictionary from word
     dictionary = dict.fromkeys(word)
 
+    # Value of k in dictionary is number of times it appears in word
     for k in dictionary:
         dictionary[k] = word.count(k)
 
