@@ -13,9 +13,13 @@ var Testing = {
         var self = this;
         var ul = document.getElementsByTagName('ul')[0];
         function updateDisplay(e) {
-            if (self.clickedList.pushIfDoesntExist(e.target.textContent))
+            // Only update display if change has been made and target type is
+            // a list element
+            if (self.clickedList.pushIfDoesntExist(e.target.textContent) &&
+                e.target.tagName === "LI")
                 self.displayData();
         }
+        // Attach event listener to unordered list
         ul.addEventListener('click', updateDisplay, false);
     },
     displayData: function() {
