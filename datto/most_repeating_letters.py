@@ -12,17 +12,16 @@ def get_num_repeating_letters(word):
     Arguments:
         word {string} -- Word to search for repeating letters
     """
-
+    # letters are case insensitive for this problem
+    word = str.lower(word)
     # Create dictionary from word
     dictionary = dict.fromkeys(word)
 
     for k in dictionary:
         dictionary[k] = word.count(k)
 
-    # Get the key of the max value
+    # Get the key of the max value and return it
     max_key = max(dictionary, key=dictionary.get)
-
-    # Return the value for max_key
     return(dictionary[max_key])
 
 if __name__ == '__main__':
