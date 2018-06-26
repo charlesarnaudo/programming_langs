@@ -12,7 +12,7 @@ var Testing = {
     applyListeners: function() {
         var self = this;
         // Get first unordered list in document
-        var ul = document.querySelector("ul")
+        var ul = document.querySelector("ul");
         function updateDisplay(e) {
             // Only update display if change has been made and target type is
             // not the element the listener is attached too (the ul)
