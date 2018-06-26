@@ -11,12 +11,13 @@ var Testing = {
     clickedList: [],
     applyListeners: function() {
         var self = this;
-        var ul = document.getElementsByTagName('ul')[0];
+        // Get first unordered list in document
+        var ul = document.querySelector("ul")
         function updateDisplay(e) {
             // Only update display if change has been made and target type is
-            // a list element
+            // not the element the listener is attached too (the ul)
             if (self.clickedList.pushIfDoesntExist(e.target.textContent) &&
-                e.target.tagName === "LI")
+                e.target !== e.currentTarget)
                 self.displayData();
         }
         // Attach event listener to unordered list
