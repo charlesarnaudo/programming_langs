@@ -1,0 +1,16 @@
+I would fix linting errors that came up for the file, which include:
+    - Missing semicolons
+    - Mixing tabs / spaces
+    - Creating a function inside of a loop
+
+I would change:
+    - Move the function declaration out of the for loop starting at line 14
+    - Check the return value for pushIfDoesntExist() and only update when a
+      change has been made
+    - Instead of attaching multiple EventListeners to each <li>, attach just
+      one listener to the <ul>
+
+** Note **
+I had never written js before so attached to this submission is a js file with
+the changes listed above made - I figured it would be good practice and it was
+a lot of fun

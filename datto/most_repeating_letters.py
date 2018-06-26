@@ -7,23 +7,19 @@ from collections import OrderedDict
 
 
 def get_num_repeating_letters(word):
-    """Create dict from word, and loop through, assigning value to the key that
-       is equal to the number of times the Key appears in word
+    """Loop through string and find the most times a char repeats itself
     Arguments:
         word {string} -- Word to search for repeating letters
     """
     # letters are case insensitive for this problem
     word = str.lower(word)
-    # Create dictionary from word
-    dictionary = dict.fromkeys(word)
 
-    # Value of k in dictionary is number of times it appears in word
-    for k in dictionary:
-        dictionary[k] = word.count(k)
-
-    # Get the key of the max value and return it
-    max_key = max(dictionary, key=dictionary.get)
-    return(dictionary[max_key])
+    count = 0
+    for char in word:
+        char_count = word.count(char)
+        if  char_count > count:
+            count = char_count
+    return (count)
 
 if __name__ == '__main__':
     # Create an argparse object
